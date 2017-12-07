@@ -31,7 +31,7 @@ func TestToText(t *testing.T) {
 	}
 }
 
-func TestToTextNewline(t *testing.T) {
+func TestToDocument(t *testing.T) {
 	cases := []struct {
 		in, want string
 	}{
@@ -50,7 +50,7 @@ func TestToTextNewline(t *testing.T) {
 
 	for i, tc := range cases {
 		t.Run(fmt.Sprintf("%v", i), func(t *testing.T) {
-			out := ToTextNewline(tc.in)
+			out := ToDocument(tc.in)
 			if out != tc.want {
 				t.Errorf("\nout:  %#v\nwant: %#v\n", out, tc.want)
 			}
